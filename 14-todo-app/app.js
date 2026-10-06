@@ -3,10 +3,27 @@ const list = document.getElementById("list");
 const count = document.getElementById("count");
 let filter = "all";
 
-let todos = JSON.parse(localStorage.getItem("todos") || "[]");
+let todos = loadTodos();
+
+function loadTodos() {
+  try {
+    const raw = localStorage.getItem("todos");
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    console.warn("todos ใน localStorage เสีย ล้างแล้วเริ่มใหม่");
+    localStorage.removeItem("todos");
+    return [];
+  }
+}
 
 function save() {
-  localStorage.setItem("todos", JSON.stringify(todos));
+  try {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  } catch (err) {
+    console.warn("save failed:", err);
+  }
 }
 
 function render() {

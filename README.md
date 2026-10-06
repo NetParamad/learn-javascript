@@ -7,6 +7,8 @@ Repo ทบทวน JS แยกโฟลเดอร์ละเรื่อ�
 - `10-dom-basics`, `11-events`, `13` ถึง `17`: เปิด `index.html` ใน browser
 - `12-fetch-api`: รันด้วย `node example.js` (Node 18+)
 
+หมายเหตุ: `example.js` = รันด้วย node, `app.js` + `index.html` = เปิด browser
+
 เป้าหมาย: `fetch` + แสดงผล ดูที่โฟลเดอร์ `13-mini-project-fetch-display`
 
 โปรเจคใช้งานจริง:
@@ -21,6 +23,8 @@ JS review repo, one folder per topic, short runnable examples.
 - `01-variables` to `09-array-methods`: run with `node example.js`
 - `10-dom-basics`, `11-events`, `13` to `17`: open `index.html` in a browser
 - `12-fetch-api`: run with `node example.js` (Node 18+)
+
+Convention: `example.js` = run with node, `app.js` + `index.html` = open in browser
 
 Goal: `fetch` + render, see `13-mini-project-fetch-display`
 
